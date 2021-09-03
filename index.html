@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Cypher du Fromage</title>
+		<link rel="stylesheet" type="text/css" href="index.css">
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body>
+		<h1>Cypher du Fromage</h1>
+		<h2>YOUR KEY</h2>
+		<div class="key_phrase">
+			<div class="phrase_row">
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(0, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(1, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(2, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(3, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(4, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(5, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(6, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(7, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(8, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_key(9, event)">
+				</div>
+			</div>
+			<div class="phrase_row">
+				<div class="phrase_column">
+					<span>0</span>
+				</div>
+				<div class="phrase_column">
+					<span>1</span>
+				</div>
+				<div class="phrase_column">
+					<span>2</span>
+				</div>
+				<div class="phrase_column">
+					<span>3</span>
+				</div>
+				<div class="phrase_column">
+					<span>4</span>
+				</div>
+				<div class="phrase_column">
+					<span>5</span>
+				</div>
+				<div class="phrase_column">
+					<span>6</span>
+				</div>
+				<div class="phrase_column">
+					<span>7</span>
+				</div>
+				<div class="phrase_column">
+					<span>8</span>
+				</div>
+				<div class="phrase_column">
+					<span>9</span>
+				</div>
+			</div>
+		</div>
+		<h2>Coordinates &#8594; Fromage</h2>
+		<div class="coordinate_to_fromage">
+			<div class="phrase_row">
+				<div class="phrase_column" oninput="create_fromage(0, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(1, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(2, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(3, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(4, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column">
+					/
+				</div>
+				<div class="phrase_column" oninput="create_fromage(5, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(6, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(7, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(8, event)">
+					<input type="text" maxlength=1>
+				</div>
+				<div class="phrase_column" oninput="create_fromage(9, event)">
+					<input type="text" maxlength=1>
+				</div>
+			</div>
+			<div class="phrase_row">
+				<div class="phrase_column_result">
+					<span id="c_to_f_0">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_1">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_2">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_3">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_4">
+						
+					</span>
+				</div>
+				<div class="phrase_column">
+					/
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_5">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_6">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_7">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_8">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="c_to_f_9">
+						
+					</span>
+				</div>
+			</div>
+		</div>
+		<h2>Fromage &#8594; Coordinates</h2>
+		<div class="fromage_to_cooridnates">
+			<div class="phrase_row">
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(0, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(1, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(2, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(3, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(4, event)">
+				</div>
+				<div class="phrase_column">
+					/
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(5, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(6, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(7, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(8, event)">
+				</div>
+				<div class="phrase_column">
+					<input type="text" maxlength=1 oninput="create_coordinate(9, event)">
+				</div>
+			</div>
+			<div class="phrase_row">
+				<div class="phrase_column_result">
+					<span id="f_to_c_0">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_1">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_2">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_3">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_4">
+
+					</span>
+				</div>
+				<div class="phrase_column">
+					/
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_5">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_6">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_7">
+						
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_8">
+
+					</span>
+				</div>
+				<div class="phrase_column_result">
+					<span id="f_to_c_9">
+
+					</span>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
